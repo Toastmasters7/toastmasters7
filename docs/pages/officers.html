@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the dedicated officers leading San Diego Toastmasters 7.">
+    <title>Meet Our Club Officers - San Diego Toastmasters 7</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/images/site.webmanifest" />
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .officer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .officer-card {
+            background: var(--bg-light);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+        .officer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .officer-image {
+            width: 100%;
+            height: 400px;
+            background: var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .officer-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .officer-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .officer-role {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+        .officer-name {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-text">San Diego Toastmasters 7</span>
+                <span class="tagline">where leaders are made</span>
+            </a>
+            <button class="mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown"><a href="about.html">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="join-club.html">5 Reasons to Join</a></li>
+                        <li><a href="officers.html" class="active">Meet Our Officers</a></li>
+                        <li><a href="club-awards.html">Club Awards</a></li>
+                    </ul>
+                </li>
+                <li><a href="member-spotlight.html">Member Spotlight</a></li>
+                <li><a href="meeting-info.html">Meeting Info</a></li>
+                <li><a href="blog.html">Blog Posts</a></li>
+                <li class="dropdown"><a href="special-events.html">Special Events</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="95th-anniversary.html">95th Anniversary</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://sites.google.com/toastmasters7.org/sd-toastmasters-7-intranet/home" target="_blank">Members Only</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: 400px;">
+        <div class="hero-image"><div class="hero-overlay"></div></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Meet Our Club Officers</h1>
+            <p class="hero-subtitle">The leadership team guiding our club to excellence</p>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <section class="content-section">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <p style="text-align: center; font-size: 1.1rem; max-width: 800px; margin: 0 auto 3rem auto;">
+                    Meet our outstanding group of officers who do their best to ensure Club 7 is one of the best Toastmasters Clubs in San Diego! Not only does Toastmasters help you to become an effective communicator, it also sets you up to be a better leader for your group or community.
+                </p>
+
+                <!-- Officers Grid -->
+                <div class="officer-grid">
+                    
+                    <!-- Club President -->
+                    <div class="officer-card">
+                        <div class="officer-image">
+                            <!-- ADD IMAGE: Club-President-Dave-Zarella.png -->
+                            <img src="../assets/images/officers/Club-President-Dave-Zarella.png" alt="Dave Zarella, Club President" onerror="this.parentElement.innerHTML='<div style=\'padding:2rem;text-align:center;\'><p style=\'font-size:3rem;margin-bottom:1rem;\'>👤</p><p>Club President<br>Dave Zarella</p></div>'">
+                        </div>
+                        <div class="officer-info">
+                            <div class="officer-role">Club President</div>
+                            <div class="officer-name">Dave Zarella</div>
+                        </div>
+                    </div>
+
+                    <!-- Immediate Past President -->
+                    <div class="officer-card">
+                        <div class="officer-image">
+                            <!-- ADD IMAGE: Immediate-Past-President-CeCe-McGee.png -->
+                            <img src="../assets/images/officers/Immediate-Past-President-CeCe-McGee.png" alt="CeCe McGee, Immediate Past President" onerror="this.parentElement.innerHTML='<div style=\'padding:2rem;text-align:center;\'><p style=\'font-size:3rem;margin-bottom:1rem;\'>👤</p><p>Immediate Past President<br>CeCe McGee</p></div>'">
+                        </div>
+                        <div class="officer-info">
+                            <div class="officer-role">Immediate Past President</div>
+                            <div class="officer-name">CeCe McGee</div>
+                        </div>
+                    </div>
+
+                    <!-- VP Education -->
+                    <div class="officer-card">
+                        <div class="officer-image">
+                            <!-- ADD IMAGE: VP-Education.png -->
+                            <img src="../assets/images/officers/VP-Education.png" alt="VP Education" onerror="this.parentElement.innerHTML='<div style=\'padding:2rem;text-align:center;\'><p style=\'font-size:3rem;margin-bottom:1rem;\'>👤</p><p>VP Education</p></div>'">
+                        </div>
+                        <div class="officer-info">
+                            <div class="officer-role">VP Education</div>
+                            <div class="officer-name">Officer Name</div>
+                        </div>
+                    </div>
+
+                    <!-- VP Membership -->
+                    <div class="officer-card">
+                        <div class="officer-image">
+                            <!-- ADD IMAGE: VP-Membership.png -->
+                            <img src="../assets/images/officers/VP-Membership.png" alt="VP Membership" onerror="this.parentElement.innerHTML='<div style=\'padding:2rem;text-align:center;\'><p style=\'font-size:3rem;margin-bottom:1rem;\'>👤</p><p>VP Membership</p></div>'">
+                        </div>
+                        <div class="officer-info">
+                            <div class="officer-role">VP Membership</div>
+                            <div class="officer-name">Officer Name</div>
+                        </div>
+                    </div>
+
+                    <!-- VP Public Relations -->
+                    <div class="officer-card">
+                        <div class="officer-image">
+                            <!-- ADD IMAGE: VP-Public-Relations.png -->
+                            <img src="../assets/images/officers/VP-Public-Relations.png" alt="VP Public Relations" onerror="this.parentElement.innerHTML='<div style=\'padding:2rem;text-align:center;\'><p style=\'font-size:3rem;margin-bottom:1rem;\'>👤</p><p>VP Public Relations</p></div>'">
+                        </div>
+                        <div class="officer-info">
+                            <div class="officer-role">VP Public Relations</div>
+                            <div class="officer-name">Officer Name</div>
+                        </div>
+                    </div>
+
+                    <!-- Secretary -->
+                    <div class="officer-card">
+                        <div class="officer-image">
+                            <!-- ADD IMAGE: Secretary.png -->
+                            <img src="../assets/images/officers/Secretary.png" alt="Secretary" onerror="this.parentElement.innerHTML='<div style=\'padding:2rem;text-align:center;\'><p style=\'font-size:3rem;margin-bottom:1rem;\'>👤</p><p>Secretary</p></div>'">
+                        </div>
+                        <div class="officer-info">
+                            <div class="officer-role">Secretary</div>
+                            <div class="officer-name">Officer Name</div>
+                        </div>
+                    </div>
+
+                    <!-- Treasurer -->
+                    <div class="officer-card">
+                        <div class="officer-image">
+                            <!-- ADD IMAGE: Treasurer.png -->
+                            <img src="../assets/images/officers/Treasurer.png" alt="Treasurer" onerror="this.parentElement.innerHTML='<div style=\'padding:2rem;text-align:center;\'><p style=\'font-size:3rem;margin-bottom:1rem;\'>👤</p><p>Treasurer</p></div>'">
+                        </div>
+                        <div class="officer-info">
+                            <div class="officer-role">Treasurer</div>
+                            <div class="officer-name">Officer Name</div>
+                        </div>
+                    </div>
+
+                    <!-- Sergeant at Arms -->
+                    <div class="officer-card">
+                        <div class="officer-image">
+                            <!-- ADD IMAGE: Sergeant-at-Arms.png -->
+                            <img src="../assets/images/officers/Sergeant-at-Arms.png" alt="Sergeant at Arms" onerror="this.parentElement.innerHTML='<div style=\'padding:2rem;text-align:center;\'><p style=\'font-size:3rem;margin-bottom:1rem;\'>👤</p><p>Sergeant at Arms</p></div>'">
+                        </div>
+                        <div class="officer-info">
+                            <div class="officer-role">Sergeant at Arms</div>
+                            <div class="officer-name">Officer Name</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Contact Section -->
+                <div style="margin-top: 4rem; text-align: center; background: var(--accent-color); padding: 3rem 2rem; border-radius: var(--border-radius);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Want to Contact an Officer?</h3>
+                    <p style="margin-bottom: 1.5rem;">Feel free to reach out to any of our officers with questions or to learn more about joining our club.</p>
+                    <p style="font-size: 1.1rem;"><strong>General Inquiries:</strong> <a href="mailto:info@toastmasters7.org" style="color: var(--primary-color);">info@toastmasters7.org</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="content-section cta-section">
+            <div class="cta-content">
+                <h2>Interested in Leadership?</h2>
+                <p class="large-text">Join our club and develop your leadership skills through hands-on experience.</p>
+                <div class="cta-buttons">
+                    <a href="meeting-info.html" class="btn btn-primary">Visit a Meeting</a>
+                    <a href="join-club.html" class="btn btn-secondary">Why Join?</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 <a href="../index.html">San Diego Toastmasters 7</a></p>
+            <p class="theme-credit">Built with ❤️ for our community</p>
+        </div>
+        <button id="scrollTop" class="scroll-top">↑</button>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
