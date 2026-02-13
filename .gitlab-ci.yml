@@ -1,0 +1,41 @@
+# GitLab Pages Configuration
+# This file deploys your static website to GitLab Pages
+
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+    # Create the public directory for GitLab Pages
+    - mkdir -p public
+    
+    # Copy all website files to the public directory
+    - cp -r index.html public/
+    - cp -r pages public/
+    - cp -r assets public/
+    - cp -r blog-posts public/
+    
+    # Optional: Add a .nojekyll file to prevent Jekyll processing
+    - touch public/.nojekyll
+    
+  artifacts:
+    paths:
+      - public
+  
+  # Deploy only when pushing to the main branch
+  only:
+    - main
+    - master
+
+# Optional: Add a test job that runs before deployment
+test:
+  stage: test
+  script:
+    - echo "Running basic checks..."
+    - test -f index.html
+    - test -d assets
+    - test -d pages
+    - echo "All checks passed!"
+  only:
+    - main
+    - master

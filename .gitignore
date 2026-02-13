@@ -1,0 +1,31 @@
+# GitLab CI/CD artifacts
+.public/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Backup files
+*.bak
+*.backup
+
+# Node modules (if you add any build tools later)
+node_modules/
+package-lock.json
+
+# Local development
+.env
+.env.local
