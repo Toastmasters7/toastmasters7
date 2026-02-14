@@ -223,7 +223,7 @@ img {
 /* Hero Section */
 .hero {
     position: relative;
-    min-height: 600px;
+    min-height: 450px;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -243,6 +243,7 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
     opacity: 0.4;
 }
 
@@ -252,30 +253,34 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(26, 77, 125, 0.9) 0%, rgba(15, 50, 84, 0.85) 100%);
+    background: linear-gradient(135deg, rgba(26, 77, 125, 0.3) 0%, rgba(15, 50, 84, 0.3) 100%);
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-md);
+    padding-top: 120px;
+    padding-bottom: var(--spacing-md);
     color: var(--text-light);
 }
 
 .hero-title {
     color: var(--text-light);
-    margin-bottom: var(--spacing-md);
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: var(--spacing-sm);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
     animation: fadeInUp 0.8s ease-out;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
 }
 
 .hero-subtitle {
-    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-    margin-bottom: var(--spacing-lg);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    margin-bottom: var(--spacing-md);
     opacity: 0.95;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
     animation: fadeInUp 0.8s ease-out 0.2s backwards;
 }
 
@@ -289,10 +294,11 @@ img {
 .badge {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
     border-radius: var(--border-radius);
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: var(--transition);
+    font-size: 0.9rem;
 }
 
 .badge:hover {
@@ -304,7 +310,30 @@ img {
     color: var(--secondary-color);
     display: block;
     margin-bottom: var(--spacing-xs);
-    font-size: 1.1rem;
+    font-size: 0.95rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 400px;
+    }
+    
+    .hero-content {
+        padding-top: 80px;
+    }
+    
+    .hero-title {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+    }
+    
+    .hero-badges {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Animations */
