@@ -227,7 +227,6 @@ img {
     display: flex;
     align-items: center;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
 }
 
 .hero-image {
@@ -244,7 +243,7 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: center top;
-    opacity: 0.4;
+    opacity: 1;
 }
 
 .hero-overlay {
@@ -253,7 +252,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(26, 77, 125, 0.3) 0%, rgba(15, 50, 84, 0.3) 100%);
+    background: linear-gradient(135deg, rgba(26, 77, 125, 0.08) 0%, rgba(15, 50, 84, 0.08) 100%);
     z-index: 1;
 }
 
@@ -263,7 +262,7 @@ img {
     max-width: 1200px;
     margin: 0 auto;
     padding: var(--spacing-md);
-    padding-top: 120px;
+    padding-top: 100px;
     padding-bottom: var(--spacing-md);
     color: var(--text-light);
 }
@@ -313,6 +312,74 @@ img {
     font-size: 0.95rem;
 }
 
+/* Hero Content Section - White Background Wrapper */
+.hero-content-section {
+    background: var(--bg-light);
+    padding: 2.5rem var(--spacing-md) 2rem var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.03);
+    margin-bottom: 0;
+}
+
+.hero-content-box {
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, rgba(26, 77, 125, 0.02) 0%, rgba(212, 137, 79, 0.02) 100%);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(26, 77, 125, 0.1);
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.hero-content-box .hero-title {
+    color: var(--primary-color);
+    text-shadow: none;
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 700;
+}
+
+.hero-content-box .hero-subtitle {
+    color: var(--text-muted);
+    text-shadow: none;
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-lg);
+    opacity: 1;
+}
+
+.hero-content-box .hero-badges {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    animation: fadeInDown 0.8s ease-out 0.2s backwards;
+}
+
+.hero-content-box .badge {
+    background: var(--bg-light);
+    border: 2px solid var(--border-color);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    color: var(--text-dark);
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.hero-content-box .badge:hover {
+    border-color: var(--secondary-color);
+    background: rgba(212, 137, 79, 0.05);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+}
+
+.hero-content-box .badge strong {
+    color: var(--secondary-color);
+    display: inline;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
 /* Mobile adjustments */
 @media (max-width: 768px) {
     .hero {
@@ -334,6 +401,30 @@ img {
     .hero-badges {
         grid-template-columns: 1fr;
     }
+    
+    .hero-content-section {
+        padding: 2rem var(--spacing-sm) 1.5rem var(--spacing-sm);
+    }
+    
+    .hero-content-box {
+        padding: var(--spacing-md);
+    }
+    
+    .hero-content-box .hero-title {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+    
+    .hero-content-box .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-content-box .hero-badges {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content-box .badge {
+        padding: var(--spacing-md);
+    }
 }
 
 /* Animations */
@@ -341,6 +432,17 @@ img {
     from {
         opacity: 0;
         transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
     }
     to {
         opacity: 1;
@@ -357,7 +459,7 @@ img {
 
 /* Content Sections */
 .content-section {
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: 3rem var(--spacing-md);
     margin-bottom: var(--spacing-lg);
 }
 
@@ -790,4 +892,422 @@ img {
         min-height: auto;
         page-break-after: always;
     }
+}
+
+/* ============================================
+   ENHANCED HOMEPAGE STYLES
+   Add this to the end of your style.css file
+   ============================================ */
+
+/* Stats Grid for Global Impact Section */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.stat-number {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Diversity Stats Cards */
+.diversity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.diversity-card {
+    background: var(--accent-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.diversity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.diversity-percentage {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Value Comparison Box */
+.value-box {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin: 2rem 0;
+    border-left: 4px solid var(--secondary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.value-box p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+.value-box p:first-child {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.value-box strong {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+/* Benefits/What You'll Gain List */
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefits-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1.05rem;
+}
+
+.benefits-list li:last-child {
+    border-bottom: none;
+}
+
+.benefits-list li::before {
+    content: "✓ ";
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* Gradient Background Boxes */
+.gradient-box {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: var(--text-light);
+    padding: 3rem 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 3rem;
+}
+
+.gradient-box h3,
+.gradient-box h4 {
+    color: var(--text-light);
+}
+
+.gradient-box p {
+    color: var(--text-light);
+}
+
+.gradient-box-secondary {
+    background: linear-gradient(135deg, var(--secondary-color), #b66f3e);
+    color: var(--text-light);
+    padding: 3rem 2rem;
+    border-radius: var(--border-radius);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Testimonial Boxes */
+.testimonial {
+    background: var(--accent-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--secondary-color);
+    transition: var(--transition);
+}
+
+.testimonial:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-md);
+}
+
+.testimonial-quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    margin: 0;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Meeting Info Card */
+.meeting-card {
+    background: var(--primary-color);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    color: var(--text-light);
+    text-align: center;
+}
+
+.meeting-card h3 {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.meeting-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.meeting-time {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.meeting-note {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin-top: 2rem;
+}
+
+.meeting-note p {
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Enhanced What to Expect List */
+.expect-list {
+    line-height: 1.8;
+    list-style: none;
+    padding: 0;
+}
+
+.expect-list li {
+    margin-bottom: 1rem;
+    padding-left: 0;
+}
+
+.expect-list li strong {
+    color: var(--primary-color);
+}
+
+/* Source Citation */
+.source-citation {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.source-citation a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.source-citation a:hover {
+    color: var(--primary-dark);
+}
+
+/* Enhanced Benefit Cards with Icons */
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.benefit-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.benefit-card p {
+    line-height: 1.6;
+}
+
+/* Inline Stats in Text */
+.inline-stat {
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+/* Highlighted Text Boxes */
+.highlight-box {
+    background: rgba(212, 137, 79, 0.1);
+    border-left: 4px solid var(--secondary-color);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.highlight-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Button Group Spacing */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.button-group .btn {
+    margin: 0;
+}
+
+/* Responsive Adjustments for Enhanced Sections */
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .diversity-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .diversity-percentage {
+        font-size: 2rem;
+    }
+    
+    .gradient-box,
+    .gradient-box-secondary {
+        padding: 2rem 1.5rem;
+    }
+    
+    .meeting-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .meeting-time {
+        font-size: 1.25rem;
+    }
+    
+    .testimonial {
+        padding: 1.5rem;
+    }
+    
+    .testimonial-quote {
+        font-size: 1rem;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .button-group .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Print Styles for Enhanced Sections */
+@media print {
+    .testimonial,
+    .value-box,
+    .gradient-box {
+        page-break-inside: avoid;
+    }
+}
+
+/* Accessibility Enhancements */
+.stat-number,
+.diversity-percentage {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Smooth Scroll Behavior for Anchor Links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus States for Accessibility */
+.testimonial:focus-within,
+.benefit-card:focus-within {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
+/* ============================================
+   MISSING CLASSES FOR NEW INDEX.HTML
+   ============================================ */
+
+/* Section Header and Subtitle */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Benefit Card Base Styles */
+.benefit-card {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--secondary-color);
+}
+
+.benefit-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.benefit-card p {
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
 }
